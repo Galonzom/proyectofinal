@@ -79,6 +79,16 @@ function validar(e) {
     alertSuccess = document.getElementById("alertSuccess"),
     alertError = document.getElementById("alertError");
 
+  // LocalStorage
+
+  let nombre = inputNombre.value;
+  let email = inputEmail.value;
+  let coment = inputComents.value;
+
+  localStorage.setItem("Nombre", nombre);
+  localStorage.setItem("Email", email);
+  localStorage.setItem("Comentarios", coment);
+
   if (
     inputNombre.value == 0 ||
     inputEmail.value == 0 ||
