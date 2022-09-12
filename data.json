@@ -1,0 +1,6 @@
+[
+    {"nombre":"Jesus Alonso", "cargo":"Chef Pizerro","image":"./img/perfil1.png"},
+    {"nombre":"Elisa Smith", "cargo":"Chef","image":"./img/perfil2.png"},
+    {"nombre":"Henry Griffinth", "cargo":"Asistente Chef","image":"./img/perfil3.png"},
+    {"nombre":"Paulina Vega", "cargo":"Asistente","image":"./img/perfil4.png"}
+]
