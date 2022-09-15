@@ -156,3 +156,34 @@ btnTop.addEventListener("click", function () {
 logo.addEventListener("click", function () {
   window.scroll(0, 0);
 });
+
+// uso Libreria Leaflets
+var map = L.map("map").setView([-33.051495, -71.605126], 13);
+
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 19,
+  attribution: "© OpenStreetMap",
+}).addTo(map);
+
+var circle = L.circle([-33.051495, -71.605126], {
+  color: "red",
+  fillColor: "#f03",
+  fillOpacity: 0.5,
+  radius: 500,
+}).addTo(map);
+
+var popup = L.popup()
+  .setLatLng([-33.051495, -71.605126])
+  .setContent("World Pizza.")
+  .openOn(map);
+
+  var popup = L.popup();
+
+  function onMapClick(e) {
+    popup
+      .setLatLng(e.latlng)
+      .setContent("You clicked the map at " + e.latlng.toString())
+      .openOn(map);
+  }
+
+  map.on("click", onMapClick);

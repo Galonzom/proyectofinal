@@ -562,6 +562,11 @@ color: var(--color-primario);
     color: #155724;
 }
 
+/* MAP */ 
+#map {
+    height: 180px;
+}
+
 
 /* FOOTER */
 
