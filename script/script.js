@@ -1,5 +1,5 @@
 // menu responsive
-var btnMenuOpen = document.getElementById("btnMenuOpen"),
+let btnMenuOpen = document.getElementById("btnMenuOpen"),
   btnManuClose = document.getElementById("btnMenuClose"),
   menuResponsive = document.getElementById("menuBar"),
   enlaces = document.getElementById("enlaces");
@@ -55,7 +55,7 @@ enlaces.addEventListener("click", function () {
 });
 
 //Slider productos
-var contenedor = document.querySelector(".slider"),
+let contenedor = document.querySelector(".slider"),
   btnIzquierdo = document.getElementById("btn-izquierda"),
   btnDerecho = document.getElementById("btn-derecho");
 
@@ -70,10 +70,10 @@ btnIzquierdo.addEventListener("click", function () {
 
 //VALIDACION FORMULARIO
 
-var formulario = document.getElementById("formulario");
+let formulario = document.getElementById("formulario");
 
 function validar(e) {
-  var inputNombre = document.getElementById("nombre"),
+  let inputNombre = document.getElementById("nombre"),
     inputEmail = document.getElementById("email"),
     inputComents = document.getElementById("comentarios"),
     alertSuccess = document.getElementById("alertSuccess"),
@@ -124,12 +124,12 @@ formulario.addEventListener("submit", validar),
 
 // BOTON HACIA ARRIBA
 
-var btnTop = document.getElementById("btn-top"),
+let btnTop = document.getElementById("btn-top"),
   logo = document.getElementById("logo");
 
 // detectamos scroll en la pagina web
 window.addEventListener("scroll", function () {
-  var scroll = document.documentElement.scrollTop;
+  let scroll = document.documentElement.scrollTop;
 
   if (scroll > 100) {
     btnTop.classList.add("show");
@@ -158,20 +158,21 @@ logo.addEventListener("click", function () {
 });
 
 // uso Libreria Leaflets
-var map = L.map("map").setView([-33.051495, -71.605126], 13);
+let map = L.map("map").setView([-33.051495, -71.605126], 13);
 
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
   attribution: "© OpenStreetMap",
 }).addTo(map);
 
-var circle = L.circle([-33.051495, -71.605126], {
+let circle = L.circle([-33.051495, -71.605126], {
   color: "red",
   fillColor: "#f03",
   fillOpacity: 0.5,
   radius: 500,
 }).addTo(map);
 
+// se utiliza var ya que la libreria no permite let entrega error en la variable
 var popup = L.popup()
   .setLatLng([-33.051495, -71.605126])
   .setContent("World Pizza.")
